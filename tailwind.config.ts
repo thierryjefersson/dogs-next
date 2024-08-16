@@ -8,10 +8,30 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      container: {
+        center: true,
+        padding: "1rem",
+        screens: {
+          sm: "800px",
+        },
+      },
+      fontFamily: {
+        primary: "Helvetica, Arial, sans-serif",
+        secundary: ["var(--font-spectral)"],
+      },
+      colors: {
+        primary: "#fb1",
+        secundary: "#764701",
+        "default-txt-color": "#333",
+      },
+      keyframes: {
+        left: {
+          from: { opacity: "0", transform: "translateX(-20px)" },
+          to: { transform: "initial", opacity: "1" },
+        },
+      },
+      animation: {
+        left: "left .3s forwards",
       },
     },
   },
